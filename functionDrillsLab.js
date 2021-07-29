@@ -1,44 +1,67 @@
-////////////////// PROBLEM 1 ////////////////////
-/*
-  Create a function called helloWorld which simply console logs 'Hello, World!'
-  Call the function.
-*/
+// ////////////////// PROBLEM 1 ////////////////////
+// /*
+//   Create a function called helloWorld which simply console logs 'Hello, World!'
+//   Call the function.
+// */
 
-//CODE HERE
+// // //CODE HERE
+   function helloworld() { 
+     console.log (helloworld)
+   }
 
+  
+// // ////////////////// PROBLEM 2 ////////////////////
+// // /*
+// //   Create a function called printName which takes in a persons name and console logs it.
+// //   Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
+// //   Call the function, passing in an argument.
+// // */
 
-////////////////// PROBLEM 2 ////////////////////
-/*
-  Create a function called printName which takes in a persons name and console logs it.
-  Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
-  Call the function, passing in an argument.
-*/
+// // //CODE HERE
 
-//CODE HERE
+function printName(name)  {
+  console.log(name); 
+}
 
-
-////////////////// PROBLEM 3 ////////////////////
-/*
-  Create a function called greeting that
-  accepts name as its only parameter.
-  greeting should log the string "Hello, "
-  plus the value of the name parameter.
-  Ex. If Jake were passed in as the argument, the function would log 'Hello, Jake'
-  Make sure to call your function and pass in an argument.
-*/
-
-//CODE HERE
+printName(`Zane`)
 
 
-////////////////// PROBLEM 4 ////////////////////
-/*
-  Create a function called add that takes in two parameters (both of these will be numbers)
-  The add function should RETURN the two parameters added together.
-  Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
-*/
 
-//CODE HERE
 
+// ////////////////// PROBLEM 3 ////////////////////
+// /*
+//   Create a function called greeting that
+//   accepts name as its only parameter.
+//   greeting should log the string "Hello, "
+//   plus the value of the name parameter.
+//   Ex. If Jake were passed in as the argument, the function would log 'Hello, Jake'
+//   Make sure to call your function and pass in an argument.
+// */
+
+// //CODE HERE
+
+function greeting(name) { 
+  console.log (`Hello ${name}`);
+}
+greeting(`Timmonthy`); 
+
+// ////////////////// PROBLEM 4 ////////////////////
+// /*
+//   Create a function called add that takes in two parameters (both of these will be numbers)
+//   The add function should RETURN the two parameters added together.
+//   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
+// */
+
+// //CODE HERE
+
+function add(num1, num2) {
+  return num1 + num2;
+ }
+ 
+ let sum = add( 3,7)
+ console.log(sum);
+
+  
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
@@ -50,6 +73,18 @@
 */
 
 //CODE HERE
+
+function nameCheck(name){
+  if(name === "Steven") {
+    console.log(`What is up Steven`);
+  } else if(name === "Bryan") {
+    console.log(`What's up Bryan`);
+  } else {
+    console.log(` name, ${name}`);
+  }
+}
+
+let nameGreeting = nameCheck(`Steven`)
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -64,6 +99,20 @@
 
 //CODE HERE
 
+function favoriteColorFinder(color) { 
+  if(color === "red") { 
+    console.log(`${color} is a great color!`);
+  } else if(color === "green") { 
+    console.log(`${color} is a dope color!`);
+  } else if(color === "black"){
+    console.log(`${color} is a nice color!`);
+  } else { 
+    console.log(`${color} that color sucks bro!`);
+  }
+}
+
+let colorRating = favoriteColorFinder("green")
+
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -74,7 +123,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printAllNames(array){ 
+  for (i = 0; i < array.length; i++) {
+    console.log(array[i]) 
 
+  }
+}
+
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -84,8 +140,19 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
+//CODE HERE  **********
+let oneNum = 23 
 
+function thatsodd(oneNum)
+{ if (oneNum % 2, i++){ 
+   console.log (`${oneNum}That not even`)
+ } else { 
+   console.log ( `${oneNum} That odd bro`) 
+
+ }
+
+} 
+ thatsodd(oneNum); 
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -100,6 +167,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
+function bigOrSmall(arr){ 
+  let answers = [];
+  for(i=0; i < arr.length; i++){ 
+    if(arr[i] > 100) {
+      answers.push("big");
+    } else { 
+      answers.push("small");
+    }
+  }
+  return answers
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
+console.log(arrayEvaluator);
+
 
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -111,6 +192,25 @@ let loser = 'Glimmer'
 
 //CODE HERE
 
+function theEliminator (contestants, loser) { 
+  for ( i = 0; i < contestants.length; i++) { 
+  if(contestants[i] === loser){ 
+    contestants.splice([i], 1); 
+  }
+}
+return contestants
+}
+
+
+theEliminator(contestants, loser); 
+console.log(contestants);
+ 
+
+
+
+
+
+
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -120,6 +220,15 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+let example = "Bucks"
+function upperCaseString(string){
+  console.log(string.toUpperCase());
+
+}
+upperCaseString(example); 
+
+
+
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -128,6 +237,15 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
+function frogCopper(gold){
+let frog = 3; 
+let frogCopperAmount = gold % frog;
+Math.floor(frogCopperAmount);
+return (gold - frogCopperAmount)  / frog  
+}
+ let totalFrogs = frogCopper(9); 
+ console.log(totalFrogs);
 
 
 ////////////////// PROBLEM 13 ////////////////////
